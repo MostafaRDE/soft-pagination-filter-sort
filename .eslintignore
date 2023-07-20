@@ -1,0 +1,11 @@
+# node_modules/* is ignored by default, but can be added using !
+!node_modules/*
+
+# Ignore dist files
+dist/*
+
+# Ignore config files
+config/*
+
+# Ignore tools
+tools/*
