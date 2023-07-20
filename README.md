@@ -21,6 +21,17 @@ npm i nestjs-soft-pagination-filter-sort
 
 ## 🚀 Usage
 
+### 0- 💉 Importing module
+
+```ts
+import { SoftPaginationFilterSortModule } from 'nestjs-soft-pagination-filter-sort'
+@Module({
+    imports: [
+        SoftPaginationFilterSortModule,
+    ],
+})
+```
+
 ### 1- 📃 Pagination
 
 #### 1-1- Simple implementation
@@ -89,12 +100,9 @@ export class CatController
 - Request DTO
 
 ```ts
-import {
-    PaginatedRequestDTOInterface,
-} from 'nestjs-soft-pagination-filter-sort'
+import { PaginatedRequestDTOInterface } from 'nestjs-soft-pagination-filter-sort'
 
-export class PaginatedRequestDTO
-    implements PaginatedRequestDTOInterface
+export class PaginatedRequestDTO implements PaginatedRequestDTOInterface
 {
     page?: number
     size?: number
@@ -107,12 +115,9 @@ export class PaginatedRequestDTO
 - Response DTO
 
 ```ts
-import {
-    PaginatedResponseDTOInterface,
-} from 'nestjs-soft-pagination-filter-sort'
+import { PaginatedResponseDTOInterface } from 'nestjs-soft-pagination-filter-sort'
 
-export class PaginatedResponseDTO<TData>
-    implements PaginatedResponseDTOInterface<TData>
+export class PaginatedResponseDTO<TData> implements PaginatedResponseDTOInterface<TData>
 {
     status: 'success' | 'warning' | 'error'
     total: number
@@ -130,9 +135,7 @@ export class PaginatedResponseDTO<TData>
 
 
 ```ts
-import {
-    BasePaginatedResponseInterceptor,
-} from 'nestjs-soft-pagination-filter-sort'
+import { BasePaginatedResponseInterceptor } from 'nestjs-soft-pagination-filter-sort'
 
 export class PaginatedResponseInterceptor<TData, TModel extends PaginatedModel<TData>>
     extends BasePaginatedResponseInterceptor<TData, TModel>
@@ -198,9 +201,7 @@ You can create main filter class for each ORMs, API repositories or any data sto
 
 ```ts
 import { FindOptions } from 'sequelize'
-import {
-    Filter,
-} from 'nestjs-soft-pagination-filter-sort'
+import { Filter } from 'nestjs-soft-pagination-filter-sort'
 
 export class SequelizeFilter<T> extends Filter<T>
 {
@@ -214,8 +215,7 @@ export class SequelizeFilter<T> extends Filter<T>
 2. Create custom filter for get cats
 
 ```ts
-export class CatsGetAllDatabaseSequelizeFilter
-    extends SequelizeFilter<{ color: string }>
+export class CatsGetAllDatabaseSequelizeFilter extends SequelizeFilter<{ color: string }>
 {
     getQuery(data?: { color: string }, name?: string):
         FindOptions<{ color: string }>
