@@ -1,4 +1,5 @@
 export * from './base.paginated.response.interceptor'
+export * from './filter'
 export * from './interfaces/paginated.request.dto.interface'
 export * from './interfaces/paginated.response.dto.interface'
 export * from './paginated.model'
