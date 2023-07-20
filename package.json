@@ -1,6 +1,6 @@
 {
   "name": "nestjs-soft-pagination-filter-sort",
-  "version": "0.9.2",
+  "version": "0.9.4",
   "description": "Base of soft pagination, filtrable and sortable package as adapter for nestjs",
   "author": "Mostafa Effati <mostafa.rostamdokht@gmail.com>",
   "license": "MIT",

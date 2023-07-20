@@ -9,16 +9,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SoftPaginationFilterSortModule = void 0;
 const common_1 = require("@nestjs/common");
 const base_paginated_response_interceptor_1 = require("./base.paginated.response.interceptor");
+const filter_service_1 = require("./filter.service");
 let SoftPaginationFilterSortModule = exports.SoftPaginationFilterSortModule = class SoftPaginationFilterSortModule {
 };
 exports.SoftPaginationFilterSortModule = SoftPaginationFilterSortModule = __decorate([
-    (0, common_1.Global)(),
     (0, common_1.Module)({
         providers: [
             base_paginated_response_interceptor_1.BasePaginatedResponseInterceptor,
+            filter_service_1.FilterService,
         ],
         exports: [
             base_paginated_response_interceptor_1.BasePaginatedResponseInterceptor,
+            filter_service_1.FilterService,
         ],
     })
 ], SoftPaginationFilterSortModule);
