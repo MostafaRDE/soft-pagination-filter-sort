@@ -256,8 +256,7 @@ export class CatsController
             offset: (paginatedRequestDTO.page && paginatedRequestDTO.size)
                 && paginatedRequestDTO.page * paginatedRequestDTO.size + (paginatedRequestDTO.offset || 0),
             limit: paginatedRequestDTO.size,
-            order: paginatedRequestDTO.sort
-                && Object.entries(paginatedRequestDTO.sort),
+            order: paginatedRequestDTO.sort && Object.entries(paginatedRequestDTO.sort),
         }
     }
 }
