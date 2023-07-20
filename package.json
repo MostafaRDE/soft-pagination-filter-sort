@@ -28,6 +28,9 @@
     "release": "release-it",
     "prepare": "husky install"
   },
+  "files": [
+    "dist"
+  ],
   "bugs": {
     "url": "https://github.com/MostafaRDE/soft-pagination-filter-sort/issues"
   },
