@@ -11,7 +11,17 @@
         "sourceMap": false,
         "outDir": "./dist",
         "rootDir": "./lib",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "incremental": true,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+        "strictBindCallApply": false,
+        "forceConsistentCasingInFileNames": false,
+        "noFallthroughCasesInSwitch": false,
+        "noUnusedLocals": true,
     },
     "include": [
         "lib/**/*"
