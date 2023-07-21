@@ -6,8 +6,6 @@
   "license": "MIT",
   "homepage": "https://github.com/MostafaRDE/soft-pagination-filter-sort#readme",
   "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "umd:main": "./dist/umd/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     "types": "./dist/types/index.d.ts",
