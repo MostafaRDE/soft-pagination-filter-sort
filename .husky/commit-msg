@@ -1,6 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run lint
-npm run test:e2e
-git add .
+npm run commitlint ${1}
