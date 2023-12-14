@@ -25,9 +25,9 @@ let BasePaginatedResponseInterceptor = exports.BasePaginatedResponseInterceptor 
             list: value.list,
             page: request.page,
             size: request.size,
-            hasPrevPage: typeof request.page === 'number' && request.page > 1,
-            hasNextPage: (typeof request.page === 'number' && typeof request.size === 'number')
-                && request.page * request.size < value.total,
+            hasPrevPage: typeof request?.page === 'number' && request?.page > 1,
+            hasNextPage: (typeof request?.page === 'number' && typeof request?.size === 'number')
+                && request?.page * request?.size < value?.total,
             total: value.total,
             ...moreData,
         };
